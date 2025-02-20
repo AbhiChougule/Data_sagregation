@@ -27,7 +27,7 @@ def special_char(data):
 
 
 def main():
-    filename="test.txt"
+    filename="test1.txt"
     fp = open(filename, "r")
     data = fp.readlines()
     emails=email_extraction(data)
