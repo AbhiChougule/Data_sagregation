@@ -18,9 +18,11 @@ def special_char(data):
     special_characters = []
     for line in data:
         for word in line.split(','):
-            if not word.isalpha() and word.isdigit():
+            word = word.strip()  # Remove spaces
+            if any(not char.isalnum() for char in word):
                 special_characters.append(word)
     return special_characters
+
 
 
 def main():
